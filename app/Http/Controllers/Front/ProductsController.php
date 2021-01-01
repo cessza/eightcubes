@@ -9,13 +9,13 @@ use Illuminate\Http\Request;
 class ProductsController extends Controller
 {
     //
-    public function listing($url){
+    public static function listing($url){
         $subcategoryCount = Subcategory::where(['url'=>$url, 'status'=>1])->count();
         if($subcategoryCount>0){
             $subcategoryDetails = Subcategory::subcategoryDetails($url);
-            $subcategoryProducts = Product::whereIn('subcategory_id',$subcategoryDetails)->where('status',1)->get()->toArray();
+            $subcategoryProducts = Product::whereIn('subcategory_id',$subcategoryDetails['subcatIds'])->where('status',1)->get()->toArray();
             // echo "<pre>"; print_r($subcategoryDetails);
-            // echo "<pre>"; print_r($subcategoryProducts); die;
+            //echo "<pre>"; print_r($subcategoryProducts); die;
             return view('front.products.listing')->with(compact('subcategoryDetails','subcategoryProducts'));
         }else{
             abort(404);
