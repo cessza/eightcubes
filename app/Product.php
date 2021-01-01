@@ -10,6 +10,9 @@ class Product extends Model
     // protected $table = "products"; 
     // protected $primaryKey = "id";
     // protected $guarded = [];
+    // public function subcategory(){
+    //     return $this->belongsTo(Subcategory::class,'subcategory_id','id');
+    // }
     public function subcategory(){
         return $this->belongsTo('App\Subcategory','subcategory_id');
     }
