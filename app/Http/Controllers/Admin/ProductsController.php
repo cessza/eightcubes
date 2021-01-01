@@ -117,6 +117,7 @@ class ProductsController extends Controller
                 $product->product_packing = $data['product_packing'];
                 $product->product_color = $data['product_color'];
                 $product->product_weight = $data['product_weight'];
+                $product->url = $data['url'];
                 $product->description = $data['description'];
                 $product->is_featured = $is_featured;
                 $product->status = 1;
