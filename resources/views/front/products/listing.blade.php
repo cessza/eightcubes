@@ -3,9 +3,9 @@
 <div class="span9">
     <ul class="breadcrumb">
         <li><a href="index.html">Home</a> <span class="divider">/</span></li>
-        <li class="active"><?php $subcategories = ['sub_name'] ?></li>
+        <li class="active">{{ $subcategoryDetails['subcategoryDetails']['sub_name']}}</li>
     </ul>
-    <h3><?php $subcategories = ['sub_name'] ?> <small class="pull-right"> 40 products are available </small></h3>
+    <h3>{{ $subcategoryDetails['subcategoryDetails']['sub_name']}} <small class="pull-right"> 40 products are available </small></h3>
     <hr class="soft"/>
     <form class="form-horizontal span6">
         <div class="control-group">
@@ -26,7 +26,7 @@
     <br class="clr"/>
     <div class="tab-content">
         <div class="tab-pane" id="listView">
-                @foreach($products as $product)
+                @foreach($subcategoryProducts as $product)
             <div class="row">
                 <div class="span2">
                 <?php $image_path = 'images/product_images/'.$product['main_image']; ?>
@@ -66,7 +66,7 @@
         </div>
         <div class="tab-pane  active" id="blockView">
             <ul class="thumbnails">
-                @foreach($products as $product)
+                @foreach($subcategoryProducts as $product)
                     <li class="span3">
                         <div class="thumbnail">
                             <a href="product_details.html">
