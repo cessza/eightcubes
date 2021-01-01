@@ -23,6 +23,7 @@ class CreateProductsTable extends Migration
             $table->float('product_bundle');
             $table->string('product_packing');
             $table->string('product_color');
+            $table->string('url');
             $table->float('product_weight')->nullable();
             $table->string('main_image')->nullable();
             $table->text('description')->nullable();
