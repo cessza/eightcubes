@@ -3,9 +3,9 @@
 <div class="span9">
     <ul class="breadcrumb">
         <li><a href="index.html">Home</a> <span class="divider">/</span></li>
-        <li class="active"><?php $subcategories = ['sub_image'] ?></li>
+        <li class="active"><?php $subcategories = ['sub_name'] ?></li>
     </ul>
-    <h3><?php $subcategories = ['sub_image'] ?> <small class="pull-right"> 40 products are available </small></h3>
+    <h3><?php $subcategories = ['sub_name'] ?> <small class="pull-right"> 40 products are available </small></h3>
     <hr class="soft"/>
     <form class="form-horizontal span6">
         <div class="control-group">
